@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mitin-tz</title>
+    <link rel="stylesheet" href="list_style.css">
+    <script src="redirect.js"></script>
+</head>
+<body>
+    <div id="page-wrapper">
+        <input
+                class="select-btn"
+                type="button"
+                value="Загрузить новый файл"
+                onclick="
+                    localStorage.clear();
+                    window.location.href = 'index.html';
+                "
+        >
+    </div>
+    <script>
+        let table = document.createElement('table');
+        data = localStorage.getItem('IndexedDB');
+        console.log(data);
+        let counter = 0;
+        var tbl = data.split("\n");
+        tbl.forEach((element) => {
+            var res = element.split(",");
+
+            for (let i = 0; i < res.length; i++){
+                res[i] = res[i].replace(/\r/g, '');
+                res[i] = res[i].replace(/['"]/g, '')
+            }
+            var iterator = 0;
+            var result = [];
+            res.forEach((element) => {
+                iterator += 1;
+                if (iterator > 5){
+                    result[result.length - 1] += element;
+                }
+                else {
+                    result.push(element);
+                }
+            });
+            let row = table.insertRow();
+            let cell1 = row.insertCell();
+            let cell2 = row.insertCell();
+            let cell3 = row.insertCell();
+            let cell4 = row.insertCell();
+            let cell5 = row.insertCell();
+            if (counter === 0){
+                if (result[0] === 'name')
+                    result[0] = 'Имя'
+                if (result[1] === 'phone')
+                    result[1] = 'Номер телефона'
+                if (result[3] === 'bday')
+                    result[3] = 'Дата рожденйя'
+                if (result[4] === 'address')
+                    result[4] = 'Адрес'
+            }
+            cell1.innerHTML = result[0];
+            cell2.innerHTML = result[1];
+            cell3.innerHTML = result[2];
+            cell4.innerHTML = result[3];
+            cell5.innerHTML = result[4];
+        });
+        document.getElementById("page-wrapper").appendChild(table);
+    </script>
+</body>

@@ -1,0 +1,89 @@
+body {
+    background-color: #CBCBCB;
+}
+#page-wrapper {
+    width: 1440px;
+    margin: auto;
+    height: 100vh;
+    background-color: #CBCBCB;
+}
+
+
+.list-table {
+    width: 1407px;
+    height: 951px;
+    top: 73px;
+    left: 33px;
+    border: solid;
+    border-radius: 10px 0 0 0;
+}
+
+table {
+    position: relative;
+    top: 73px;
+    width: 1407px;
+    height: 951px;
+    left: 33px;
+    border-top-left-radius: 10px;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+    font: 12px Noto Sans;
+    line-height: 16.34px;
+    color: #000000;
+    font-weight: 400;
+}
+
+tr {
+    position: relative;
+    width: 956px;
+    height: 51px;
+    border: 1px;
+    border-bottom: solid 1px #CBCBCB;
+}
+
+tr td {
+    padding-left: 35px;
+}
+
+table tr:not(:first-child):hover {
+    background-color: #6346B440;
+}
+
+tr:first-child {
+    position: relative;
+    width: 956px;
+    height: 51px;
+    border-bottom: 2px solid #898989
+}
+
+tr:first-child td {
+    border-right: 1px solid #C0C0C0;
+}
+
+#select-file {
+    display: none;
+}
+
+.select-btn {
+    border: none;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 1262px;
+    width: 164px;
+    height: 36px;
+    border-radius: 5px;
+    background-color: #6346B4;
+    font: 12px Noto Sans;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 16.34px;
+    text-align: center;
+}
+
+.select-btn:hover {
+    background-color: #A88EF0;
+}
+
+.select-btn:active {
+    background-color: #311F63;
+}

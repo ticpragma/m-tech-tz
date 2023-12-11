@@ -1,0 +1,81 @@
+body {
+    background-color: #CBCBCB;
+}
+.page-wrapper {
+    width: 1440px;
+    margin: auto;
+    height: 100vh;
+    background-color: #CBCBCB;
+    text-align: center;
+}
+
+.dialog-icon {
+    position: relative;
+    display: inline-block;
+    width: 823px;
+    height: 367px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px #00000080;
+    text-align: center;
+    top: 328px;
+}
+
+.dialog-icon p {
+    font: 24px Noto Sans sans-serif;
+    color: #000000;
+    position: relative;
+    top: 3em;
+}
+
+.dialog-icon input {
+    position: relative;
+    top: 10em;
+}
+
+#select-file {
+    display: none;
+}
+
+.select-btn {
+    border: none;
+    width: 274px;
+    height: 48px;
+    top: 535px;
+    border-radius: 5px;
+    background-color: #6346B4;
+    color: #FFFFFF;
+    font: 16px Noto Sans;
+    font-weight: 400;
+}
+
+.select-btn:hover {
+    background-color: #A88EF0;
+}
+
+.select-btn:active {
+    background-color: #311F63;
+}
+
+.error-box {
+    position: absolute;
+    margin: 0 auto;
+    width: 720px;
+    height: 89px;
+    top: 35px;
+    left:50%;
+    transform:translate(-50%);
+    border-radius: 10px;
+    background-color: #FF6565;
+    color: #FFFFFF;
+    text-align: center;
+    font: 20px Noto Sans sans-serif;
+    font-weight: 400;
+    display: none;
+}
+
+.error-box p {
+    position: relative;
+    margin: 0;
+    top: 34px;
+}

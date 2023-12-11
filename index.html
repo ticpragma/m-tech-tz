@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="windows-1251">
+    <title>Mitin-tz</title>
+    <link rel="stylesheet" href="index_style.css">
+    <script src="redirect.js"></script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div id="error" class="error-box">
+            <p>Неправильный формат файла, разрешены только файлы .CSV</p>
+        </div>
+        <div class="dialog-icon">
+            <div class="data">
+                <p>Выберите файл в формате CSV</p>
+                <input id="select-file" type="file" accept="">
+                <input class="select-btn" type="button" value="Выберите файл" onclick="document.getElementById('select-file').click();">
+            </div>
+        </div>
+        <script>
+            const element = document.getElementById("select-file");
+
+            element.addEventListener("change", (event) => {
+                const file = event.target.files[0];
+                if (file.name.split(".").pop() === "csv") {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const data = e.target.result;
+                        console.log(data);
+                        localStorage.setItem('IndexedDB', data);
+                    }
+                    reader.readAsText(file, 'windows-1251');
+                    window.location.href = 'list.html';
+                }
+                else
+                    document.getElementById("error").style.display = 'block';
+            });
+        </script>
+    </div>
+</body>
