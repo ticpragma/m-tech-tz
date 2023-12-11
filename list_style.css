@@ -27,7 +27,7 @@ table {
     border-top-left-radius: 10px;
     background-color: #FFFFFF;
     border-collapse: collapse;
-    font: 12px Noto Sans;
+    font: 16px Noto Sans;
     line-height: 16.34px;
     color: #000000;
     font-weight: 400;
@@ -43,6 +43,8 @@ tr {
 
 tr td {
     padding-left: 35px;
+    font-size: 12px;
+    line-height: 16px;
 }
 
 table tr:not(:first-child):hover {
@@ -54,11 +56,16 @@ tr:first-child {
     position: relative;
     width: 956px;
     height: 51px;
-    border-bottom: 2px solid #898989
+    border-bottom: 2px solid #898989;
+    font-size: 18px;
 }
 
 tr:first-child td {
     border-right: 1px solid #C0C0C0;
+}
+
+tr:first-child td:last-child {
+    border-right: none;
 }
 
 #select-file {
