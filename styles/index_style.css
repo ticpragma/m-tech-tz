@@ -51,10 +51,12 @@ body {
 
 .select-btn:hover {
     background-color: #A88EF0;
+    transition: 0.5s;
 }
 
 .select-btn:active {
     background-color: #311F63;
+    transition: 0.5s;
 }
 
 .error-box {

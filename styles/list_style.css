@@ -47,6 +47,7 @@ tr td {
 
 table tr:not(:first-child):hover {
     background-color: #6346B440;
+    transition: 0.3s;
 }
 
 tr:first-child {
@@ -76,14 +77,16 @@ tr:first-child td {
     font: 12px Noto Sans;
     font-weight: 400;
     color: #FFFFFF;
-    line-height: 16.34px;
+    line-height: 16px;
     text-align: center;
 }
 
 .select-btn:hover {
     background-color: #A88EF0;
+    transition: 0.5s;
 }
 
 .select-btn:active {
     background-color: #311F63;
+    transition: 0.5s;
 }
